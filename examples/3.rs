@@ -1,4 +1,3 @@
-// XXX: unsound
 pub fn foo3() -> i32 {
     let myref: *const i32;
     {
@@ -7,3 +6,5 @@ pub fn foo3() -> i32 {
     }
     unsafe { *myref }
 }
+
+fn main() {}

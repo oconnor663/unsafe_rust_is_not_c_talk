@@ -1,10 +1,12 @@
-fn main() {
-    let myref: *const i32;
-    {
-        let myint = 5;
-        myref = &myint;
-    }
+pub fn foo2() -> i32 {
     unsafe {
-        std::process::exit(*myref);
+        let myref: &i32;
+        {
+            let myint = 5;
+            myref = &myint;
+        }
+        *myref
     }
 }
+
+fn main() {}
