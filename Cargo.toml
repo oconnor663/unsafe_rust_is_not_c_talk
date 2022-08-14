@@ -1,0 +1,6 @@
+[package]
+name = "unsafe_rust_is_not_c"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
