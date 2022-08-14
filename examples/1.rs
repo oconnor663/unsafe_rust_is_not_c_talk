@@ -7,4 +7,6 @@ pub fn foo1() -> i32 {
     *myref
 }
 
-fn main() {}
+fn main() {
+    dbg!(foo1());
+}

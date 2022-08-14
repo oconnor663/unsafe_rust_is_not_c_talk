@@ -9,4 +9,6 @@ pub fn foo2() -> i32 {
     }
 }
 
-fn main() {}
+fn main() {
+    dbg!(foo2());
+}
