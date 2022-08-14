@@ -7,4 +7,6 @@ pub fn foo3() -> i32 {
     unsafe { *myref }
 }
 
-fn main() {}
+fn main() {
+    dbg!(foo3());
+}
