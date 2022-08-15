@@ -16,4 +16,5 @@
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=11c2ef20afd76759fcc9672a3a5523bb
 - C is stricter than you might think.
   - the standard says it's illegal to access a struct through the wrong pointer type
-  - in practice, this UB is triggered by aliasing: https://godbolt.org/z/nEajEGqKG
+  - in practice, this UB is triggered by aliasing: https://godbolt.org/z/6PrfojzGs
+  - a similar bug with overlap: https://godbolt.org/z/1q9n4s7nG
