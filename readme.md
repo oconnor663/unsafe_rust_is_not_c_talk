@@ -1,13 +1,15 @@
 # Unsafe Rust is not C
 
-- unsafe doesn't "turn off the borrow checker"
-  - https://godbolt.org/z/8c5MMqoWf doesn't compile
-  - and https://godbolt.org/z/cr5a7jq44 still doesn't compile
-- specific superpowers, most importantly raw pointers
-  - basic int use-after-scope: https://godbolt.org/z/GsfMc3rTq
-  - same thing failing Miri: https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=5cd025aad88bd35c05f0bf34f846bf81
-- motivation: use-after-free and race conditions
+- Unsafe doesn't "turn off the borrow checker".
+  - A dangling reference into Vec doesn't compile:
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9019e5ed43179d3243ba403e8e11c094
+  - With unsafe it still doesn't compile:
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=b8963fed33351ce7b9962491e996b311
+- Unsafe gives us specific superpowers, particularly raw pointers.
+  - Now it compiles, runs, and fails Miri:
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=d4a6b1c46cc9c123dc874c0ab20f9df8
+- Motivation: use-after-free and race conditions
 - aliasing rules
-  - comparison with the `restrict` keyword: https://godbolt.org/z/16q3fbKrs
+  - comparison with the `restrict` keyword: https://godbolt.org/z/deaKqfsbT
 - C strict aliasing examples
-  - with structs: https://godbolt.org/z/Ghzs9T18d
+  - with structs: https://godbolt.org/z/nEajEGqKG
