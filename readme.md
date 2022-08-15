@@ -8,6 +8,8 @@
 - Unsafe gives us specific superpowers, particularly raw pointers.
   - Now it compiles, runs, and fails Miri:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=d4a6b1c46cc9c123dc874c0ab20f9df8
+  - Insert an extra dummy alloc to force obvious UB:
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=72ae240c1aa78db9731c2dc2a58cbb34
 - Motivation: use-after-free and race conditions
 - aliasing rules
   - comparison with the `restrict` keyword: https://godbolt.org/z/deaKqfsbT
