@@ -10,8 +10,10 @@
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=ceee9a7cc498f8a39548c0d5833e8657
   - Insert an extra dummy alloc to force obvious UB:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=e8f579f55b5ec161f1afc45c32c7aba6
-- Motivation: use-after-free and race conditions
-- aliasing rules
+- Unsafe Rust is stricter than C.
   - comparison with the `restrict` keyword: https://godbolt.org/z/deaKqfsbT
-- C strict aliasing examples
-  - with structs: https://godbolt.org/z/nEajEGqKG
+  - the very *existence* of aliasing references is UB:
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=11c2ef20afd76759fcc9672a3a5523bb
+- C is stricter than you might think.
+  - the standard says it's illegal to access a struct through the wrong pointer type
+  - in practice, this UB is triggered by aliasing: https://godbolt.org/z/nEajEGqKG
