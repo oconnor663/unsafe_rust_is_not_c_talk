@@ -20,6 +20,6 @@
   - in practice, this UB is triggered by aliasing: https://godbolt.org/z/9jPKhWMvx
   - a similar bug with overlap: https://godbolt.org/z/1q9n4s7nG
   - Rust raw pointers do not have these limitations (at least not today):
-    - https://godbolt.org/z/jzco1j3P7
-    - https://godbolt.org/z/9K65xMcq7
+    - https://godbolt.org/z/b974sdxMW
+    - https://godbolt.org/z/9KnExPY1e
 - Aliasing analysis is important for big optimizations: https://godbolt.org/z/Kxb5h3Tcf
