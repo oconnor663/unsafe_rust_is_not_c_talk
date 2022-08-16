@@ -20,5 +20,5 @@
   - in practice, this UB is triggered by aliasing: https://godbolt.org/z/9jPKhWMvx
   - a similar bug with overlap: https://godbolt.org/z/1q9n4s7nG
   - Rust raw pointers do not have these limitations (at least not today):
-    - https://godbolt.org/z/e6W3jejcn
-    - https://godbolt.org/z/e3z41o5E8
+    - https://godbolt.org/z/jzco1j3P7
+    - https://godbolt.org/z/9K65xMcq7
