@@ -22,4 +22,4 @@
   - Rust raw pointers do not have these limitations (at least not today):
     - https://godbolt.org/z/jzco1j3P7
     - https://godbolt.org/z/9K65xMcq7
-- Aliasing analysis is important for big optimizations: https://godbolt.org/z/3P84zPo9r
+- Aliasing analysis is important for big optimizations: https://godbolt.org/z/7Yd8M7cn5
