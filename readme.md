@@ -21,5 +21,5 @@
   - a similar bug with overlap: https://godbolt.org/z/EY4ns8xo3
   - Rust raw pointers do not have these limitations (at least not today):
     - https://godbolt.org/z/5Wsz6MTvG
-    - https://godbolt.org/z/1TfrqzvE5
+    - https://godbolt.org/z/rd9Tvv3eh
 - Aliasing analysis is important for big optimizations: https://godbolt.org/z/v3rPMoars
