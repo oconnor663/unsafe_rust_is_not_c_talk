@@ -11,10 +11,10 @@
   - Insert an extra dummy alloc to force obvious UB:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=e8f579f55b5ec161f1afc45c32c7aba6
 - Unsafe Rust is stricter than C.
-  - breaking the aliasing rules for references is UB:
+  - Breaking the aliasing rules for references is UB:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=32b8750ce7e9ef752a1e372b2dbd4d9e
-  - comparison with the `restrict` keyword in C: https://godbolt.org/z/rzv7Taof6
-  - in fact the very *existence* of aliasing references is UB according to Miri:
+  - A side-by-side comparison with the `restrict` keyword in C: https://godbolt.org/z/rzv7Taof6
+  - In fact the very *existence* of aliasing references is UB according to Miri:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=11c2ef20afd76759fcc9672a3a5523bb
 - C is stricter than you might think.
   - https://blog.regehr.org/archives/1307
