@@ -18,10 +18,10 @@
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=11c2ef20afd76759fcc9672a3a5523bb
 - C is stricter than you might think.
   - https://blog.regehr.org/archives/1307
-  - the standard says it's illegal to access a struct through the wrong pointer type
-  - in practice, this UB is triggered by aliasing: https://godbolt.org/z/EMjhKzhq5
-  - a similar bug with overlap: https://godbolt.org/z/8PfrrE1P9
-  - Rust raw pointers do not have these limitations (at least not today):
+  - Accessing an object through the wrong pointer type is UB: https://godbolt.org/z/EMjhKzhq5
+  - Reading and writing overlapping objects is UB: https://godbolt.org/z/8PfrrE1P9
+  - ASan and UBSan aren't catching either of those examples today.
+  - Raw pointers in Rust don't have those restrictions (at least not today):
     - https://godbolt.org/z/5Wsz6MTvG
     - https://godbolt.org/z/rd9Tvv3eh
-- Aliasing analysis is important for big optimizations: https://godbolt.org/z/jdeM4Wv9v
+- Modern compilers can perform miracles, but they often rely on aliasing rules: https://godbolt.org/z/jdeM4Wv9v
