@@ -1,9 +1,9 @@
 # Unsafe Rust is not C
 
 - Unsafe doesn't "turn off the borrow checker".
-  - A dangling reference into Vec doesn't compile: https://godbolt.org/z/P3Tfqbez8
-  - With unsafe it still doesn't compile: https://godbolt.org/z/YfqjGfT7h
-  - We need a raw pointer to make it compile, run, and fail ASan: https://godbolt.org/z/qYd893Ke3
+  - A dangling reference into Vec doesn't compile: https://godbolt.org/z/jff8KMTM8
+  - With unsafe it still doesn't compile: https://godbolt.org/z/r4PzhbcdP
+  - We need a raw pointer to make it compile, run, and fail ASan: https://godbolt.org/z/5e4x77vbn
 - Unsafe Rust is stricter than C.
   - Breaking the aliasing rules for references is UB: https://godbolt.org/z/769oM8e6x
   - We can detect this with Miri:
