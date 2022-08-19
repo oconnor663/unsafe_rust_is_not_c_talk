@@ -9,7 +9,7 @@
 - Rust is stricter than C.
   - Breaking the aliasing rules for references is UB: https://godbolt.org/z/769oM8e6x
   - We can detect this with Miri:
-    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=9650578b9097ad8e8766d15fda95133e
+    https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=f207dbdafb638cce4f96724a4512569b
   - A side-by-side comparison with the `restrict` keyword in C: https://godbolt.org/z/rzv7Taof6
   - The very *existence* of an aliasing mutable reference is UB according to Miri:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=11c2ef20afd76759fcc9672a3a5523bb
