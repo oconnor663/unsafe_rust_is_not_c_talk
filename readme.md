@@ -17,7 +17,7 @@
   - https://blog.regehr.org/archives/1307
   - Accessing an object through the wrong pointer type is UB: https://godbolt.org/z/7qWdfG5MG
   - Reading and writing overlapping objects is UB: https://godbolt.org/z/f73Ejjnbj
-  - ASan and UBSan aren't catching either of those examples today.
+  - ASan and UBSan don't catch either of those examples today.
   - Raw pointers in Rust don't have those restrictions (at least not today):
     - https://godbolt.org/z/oh8q663sn
     - https://godbolt.org/z/bcheT4KoM
