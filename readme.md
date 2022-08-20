@@ -1,6 +1,6 @@
 # Unsafe Rust is not C
 
-![wonka](wonka.png)
+[![wonka](wonka.png)](https://www.youtube.com/watch?v=SVi3-PrQ0pY)
 
 - Unsafe doesn't "turn off the borrow checker".
   - A dangling reference into Vec doesn't compile: https://godbolt.org/z/jff8KMTM8
