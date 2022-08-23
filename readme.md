@@ -7,7 +7,8 @@
   - With unsafe it still doesn't compile: https://godbolt.org/z/r4PzhbcdP
   - We need a raw pointer to make it compile, run, and fail ASan: https://godbolt.org/z/5e4x77vbn
 - Rust is stricter than C.
-  - Breaking the aliasing rules for references is UB: https://godbolt.org/z/769oM8e6x
+  - Compiler errors like this might feel like a "false positive": https://godbolt.org/z/jjTGPE1fK
+  - But breaking the aliasing rules for references is UB: https://godbolt.org/z/769oM8e6x
   - We can detect this with Miri:
     https://play.rust-lang.org/?version=stable&mode=debug&edition=2021&gist=f207dbdafb638cce4f96724a4512569b
   - A side-by-side comparison with the `restrict` keyword in C: https://godbolt.org/z/rzv7Taof6
