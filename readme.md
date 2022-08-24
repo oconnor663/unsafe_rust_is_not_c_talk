@@ -3,9 +3,9 @@
 [![wonka](wonka.png)](https://www.youtube.com/watch?v=SVi3-PrQ0pY)
 
 - Unsafe doesn't "turn off the borrow checker".
-  - A dangling reference into Vec doesn't compile: https://godbolt.org/z/jff8KMTM8
-  - With unsafe it still doesn't compile: https://godbolt.org/z/r4PzhbcdP
-  - We need a raw pointer to make it compile, run, and fail ASan: https://godbolt.org/z/5e4x77vbn
+  - A dangling reference into Vec doesn't compile: https://godbolt.org/z/vss7Wb585
+  - With unsafe it still doesn't compile: https://godbolt.org/z/T55Tx8KEn
+  - We need a raw pointer to make it compile, run, and fail ASan: https://godbolt.org/z/dzo6Pan5q
 - Rust is stricter than C.
   - Compiler errors like this might feel like a "false positive": https://godbolt.org/z/jjTGPE1fK
   - But breaking the aliasing rules for references is UB: https://godbolt.org/z/769oM8e6x
