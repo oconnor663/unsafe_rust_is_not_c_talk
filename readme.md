@@ -22,4 +22,4 @@
   - Raw pointers in Rust don't have those restrictions (at least not today):
     - https://godbolt.org/z/oh8q663sn
     - https://godbolt.org/z/bcheT4KoM
-- Modern compilers can perform miracles, but they often rely on aliasing rules: https://godbolt.org/z/f8Mz33Wbe
+- Modern compilers can perform miracles, but they often rely on aliasing rules: https://godbolt.org/z/shTTcv69h
