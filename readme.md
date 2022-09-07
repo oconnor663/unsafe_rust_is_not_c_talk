@@ -1,6 +1,8 @@
 # Unsafe Rust is not C
 
-[![wonka](wonka.png)](https://www.youtube.com/watch?v=SVi3-PrQ0pY)
+This talk was recorded and [**uploaded to YouTube**](https://youtu.be/DG-VLezRkYQ).
+
+<a href="https://www.youtube.com/watch?v=SVi3-PrQ0pY"><img src="wonka.png" alt="Wonka" width="400"></a>
 
 - Unsafe doesn't "turn off the borrow checker".
   - A dangling reference into Vec doesn't compile: https://godbolt.org/z/vss7Wb585
